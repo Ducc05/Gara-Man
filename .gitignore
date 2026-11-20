@@ -1,0 +1,9 @@
+*
+!.gitignore
+!pom.xml
+!README.md
+!src/
+!src/**
+!sql/
+!sql/schema.sql
+!sql/data.sql

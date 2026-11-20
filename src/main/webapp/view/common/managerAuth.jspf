@@ -1,0 +1,6 @@
+<%
+if (session.getAttribute("manager") == null) {
+  response.sendRedirect(request.getContextPath() + "/view/employee/LoginView3.jsp");
+  return;
+}
+%>

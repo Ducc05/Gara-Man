@@ -1,0 +1,200 @@
+:root {
+  --navy: #10264a;
+  --blue: #1768c5;
+  --paper: #f4f7fb;
+  --ink: #172b4d;
+  --muted: #60718a;
+  --line: #d8e1ec;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  font:
+    15px Arial,
+    sans-serif;
+  color: var(--ink);
+}
+header {
+  height: 68px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  padding: 0 max(calc((100vw - 1120px) / 2), 24px);
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: 0.4px;
+}
+main {
+  max-width: 1120px;
+  margin: 36px auto;
+  padding: 0 22px;
+}
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 24px #10264a0b;
+}
+h1 {
+  margin: 0 0 8px;
+  font-size: 27px;
+}
+p.sub {
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+label {
+  display: block;
+  font-weight: 700;
+  margin: 14px 0 7px;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #bfccda;
+  border-radius: 7px;
+  font: inherit;
+  background: #fff;
+}
+.date-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+.date-input [data-date-text] {
+  flex: 1;
+  min-width: 0;
+}
+.date-input .date-picker-native {
+  position: absolute;
+  right: 72px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 20px;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 7px;
+  padding: 11px 17px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn.secondary {
+  background: #e8eef6;
+  color: var(--navy);
+}
+.error {
+  padding: 11px 14px;
+  border-radius: 7px;
+  background: #fff0f0;
+  color: #aa2531;
+  margin: 12px 0;
+}
+.success {
+  padding: 11px 14px;
+  border-radius: 7px;
+  background: #e9f8ef;
+  color: #176637;
+  margin: 12px 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+}
+th,
+td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+}
+th {
+  background: #eff4fa;
+  color: var(--navy);
+}
+tr.clickable:hover {
+  background: #f5f9ff;
+}
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 12px;
+}
+fieldset label {
+  font-weight: 400;
+  margin: 5px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.small {
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (max-width: 650px) {
+  main {
+    margin: 18px auto;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 19px;
+  }
+  header {
+    padding: 0 20px;
+  }
+}
+.date-picker-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+.date-picker-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
